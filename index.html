@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Repair Sign-In</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<h1>Repair Sign-In</h1>
+
+<button onclick="login()">Sign in with Microsoft</button>
+
+<form id="repairForm" hidden>
+    <input placeholder="Customer" id="customer" required />
+    <input placeholder="Equipment" id="equipment" required />
+    <input placeholder="Serial Number" id="serial" />
+    <textarea placeholder="Fault description" id="fault"></textarea>
+
+    <button type="submit">Save & Sync</button>
+</form>
+
+<p id="status"></p>
+
+<script src="app.js"></script>
+</body>
+</html>
