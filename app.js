@@ -1,6 +1,6 @@
 async function login() {
     // Redirect to Microsoft login for SPA
-    window.location.href = "https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=a6a622dc-e69a-4db7-aa97-4ffe9f3cf2ef&response_type=token&redirect_uri=" + encodeURIComponent(window.location.href) + "&scope=Files.ReadWrite.All";
+    window.location.href = "https://login.microsoftonline.com/9bcad0a7-b9ab-4a75-b321-5c55972f0032/oauth2/v2.0/authorize?client_id=a6a622dc-e69a-4db7-aa97-4ffe9f3cf2ef&response_type=token&redirect_uri=" + encodeURIComponent(window.location.href) + "&scope=Files.ReadWrite.All";
 }
 
 window.onload = () => {
@@ -47,4 +47,5 @@ document.getElementById("repairForm").addEventListener("submit", async (e) => {
     });
 
     status.textContent = res.ok ? "Saved to Excel ✔️" : "Error saving";
+
 });
