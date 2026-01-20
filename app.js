@@ -1,7 +1,7 @@
 async function login() {
     const tenantId = "9bcad0a7-b9ab-4a75-b321-5c55972f0032";       // paste your Tenant ID here
     const clientId = "a6a622dc-e69a-4db7-aa97-4ffe9f3cf2ef";       // paste your App Registration client ID here
-    const redirectUri = encodeURIComponent(window.location.href);
+    const redirectUri = encodeURIComponent("https://liam-scale.github.io/Shetland-Fix-It-Shelf-Web-App/");
     const scope = "Files.ReadWrite.All";
 
     const loginUrl = `https://login.microsoftonline.com/${tenantId}/oauth2/v2.0/authorize?client_id=${clientId}&response_type=token&redirect_uri=${redirectUri}&scope=${scope}`;
@@ -55,4 +55,5 @@ document.getElementById("repairForm").addEventListener("submit", async (e) => {
     status.textContent = res.ok ? "Saved to Excel ✔️" : "Error saving";
 
 });
+
 
